@@ -21,7 +21,7 @@ class RPDatatableExtension extends Extension
         $datatableConfigDefinitions = [];
         foreach ($config['datatables'] as $tableConfig) {
             $datatableConfigDefinition = new Definition();
-            $datatableConfigDefinition->setClass('RP\DatatableBundle\Datatable\Config');
+            $datatableConfigDefinition->setClass('RP\DatatableBundle\Datatable\Config\Config');
             $datatableConfigDefinition->addMethodCall('setId', [$tableConfig['id']]);
             $datatableConfigDefinition->addMethodCall('setEntityName', [$tableConfig['entity']['name']]);
             $datatableConfigDefinition->addMethodCall('setEntityAlias', [$tableConfig['entity']['alias']]);
