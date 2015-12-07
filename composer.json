@@ -1,0 +1,22 @@
+{
+    "name":         "ruslan-polutsygan/datatable-bundle",
+    "description":  "Add some functionality to ali/datatable",
+    "keywords":     ["development", "tests", "fixtures"],
+    "homepage":     "https://github.com/ruslan-polutsygan/datatable-bundle",
+    "type":         "library",
+    "license":      "MIT",
+    "authors":      [
+        {
+            "name":      "Ruslan Polutsygan",
+            "email":     "ruslan.polutsygan@gmail.com"
+        }
+    ],
+    "require": {
+        "ali/datatable": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "RP\\": "src/"
+        }
+    }
+}

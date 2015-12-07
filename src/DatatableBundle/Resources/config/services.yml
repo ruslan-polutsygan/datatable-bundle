@@ -1,0 +1,17 @@
+services:
+    datatable.factory:
+        class: RP\DatatableBundle\Datatable\Factory
+        calls:
+            - [ setContainer, [ @service_container ] ]
+    datatable.registry:
+        class: RP\DatatableBundle\Datatable\Registry
+        arguments: [ @datatable.factory ]
+
+    datatable.twig.extension:
+        class: RP\DatatableBundle\Twig\Extension\DatatableExtension
+        arguments:
+#            - @twig
+            - @form.factory
+            - @datatable.registry
+        tags:
+         - { name: twig.extension }
